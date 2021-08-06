@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #result {
+            width: 50%;
+            height: 40px;
+            border: 2px black solid;
+            box-sizing: border-box;
+            padding: 10px;
+
+        }
+        table {
+            width: 50%;
+        }
+        td {
+            display: flex;
+        }
+        input {
+            /*display: flex;*/
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <table>
+        <input id="result" type="text" disabled >
+        <tr>
+            <td>
+                <input onclick="insert(event)" type="button"  value="Rad">
+                <input onclick="insert(event)" type="button"  value="...">
+                <input onclick="insert(event)" type="button" value="x!">
+                <input onclick="insert(event)" type="button" value="(">
+                <input onclick="insert(event)" type="button"  value=")">
+                <input onclick="insert(event)" type="button" value="%">
+                <input onclick="nutXoa(event)" type="button"  value="AC">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input onclick="insert(event)" type="button"  value="Inv">
+                <input onclick="insert(event)" type="button" value="sin">
+                <input onclick="insert(event)" type="button"  value="In">
+                <input onclick="insert(event)" type="button"  value="7">
+                <input onclick="insert(event)" type="button"  value="8">
+                <input onclick="insert(event)" type="button"  value="9">
+                <input onclick="insert(event)" type="button"  value="/">
+            </td>
+        </tr>
+        <tr>
+            <td><input onclick="insert(event)" type="button"  value="π">
+                <input onclick="insert(event)" type="button"  value="cos">
+                <input onclick="insert(event)" type="button" value="log">
+                <input onclick="insert(event)" type="button" value="4">
+                <input onclick="insert(event)" type="button" value="5">
+                <input onclick="insert(event)" type="button" value="6">
+                <input onclick="insert(event)" type="button" value="x"></td>
+        </tr>
+        <tr>
+            <td><input onclick="insert(event)" type="button" value="e">
+                <input onclick="insert(event)" type="button" value="tan">
+                <input onclick="insert(event)" type="button" value="√">
+                <input onclick="insert(event)" type="button" value="1">
+                <input onclick="insert(event)" type="button" value="2">
+                <input onclick="insert(event)" type="button" value="3">
+                <input onclick="insert(event)" type="button" value="-"></td>
+        </tr>
+        <tr>
+            <td><input onclick="insert(event)" type="button" value="Ans">
+                <input onclick="insert(event)" type="button" value="EXP">
+                <input onclick="insert(event)" type="button" value="x^y">
+                <input onclick="insert(event)" type="button" value=".">
+
+                <input onclick="insert(event)" type="button" value="0">
+                <input onclick="ketQua(event)" type="button" value="=">
+                <input onclick="insert(event)" type="button" value="+"></td>
+        </tr>
+
+    </table>
+
+<script>
+    let str="";
+    let operator = "";
+    let result = document.getElementById('result');
+    // let inputs = document.getElementsByTagName("input");
+    // for(let i = 0; i < inputs.length; i++) {
+    //     inputs[i].addEventListener('click', function(e) {
+    //         const val = event.target.value;
+    //         if(val == '=') {
+    //
+    //         }
+    //         else if(val == 'AC') {
+    //             str = str.substring(0, str.length - 1);
+    //         }
+    //         else {
+    //             console.log(val)
+    //             str = str+ val;
+    //         }
+    //         document.getElementById('result').value=str;
+    //     })
+    // }
+
+    function insert(event) {
+        const val = event.target.value;
+        result.value += val;
+        if(val == '+') operator = "+";
+        if(val == '-') operator = "-";
+        if(val == '/') operator = "/";
+        if(val == 'x') operator = "x";
+
+    }
+    function nutXoa(){
+        let a = result.value;
+        result.value = a.substring(0, a.length -1)
+    }
+    function ketQua(){
+        if(operator) {
+            if(operator == "x") {
+                let ops = result.value.split(operator); // 34+34 => [34, 34];
+                result.value = +ops[0] * (+ops[1]);
+            }
+            else {
+                result.value = eval(result.value);
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

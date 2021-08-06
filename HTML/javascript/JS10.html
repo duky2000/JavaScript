@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="5">
+    <tr>
+        <td>số 1 : <input id="so1"type="text"></td>
+
+    </tr>
+
+    <tr>
+        <td> số 2 : <input id="so2" type="text"></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="+" onclick="tinhToan('+')">
+            <input type="button" value="-" onclick="tinhToan('-')">
+            <input type="button" value="*" onclick="tinhToan('*')">
+            <input type="button" value="/" onclick="tinhToan('/')">
+        </td>
+
+
+
+    </tr>
+    <tr>
+        <td>
+            kết quả : <input id="so3" type="text" disabled>
+        </td>
+    </tr>
+
+</table>
+
+<script>
+    function tinhToan(phepTinh){
+        let so1=document.getElementById("so1").value;
+        let so2=document.getElementById("so2").value;
+        if(so1==""||so2==""){
+            alert("Hay nhap so");
+            return;
+        }
+        let ketQua=0;
+        switch (phepTinh){
+            case '+':
+                ketQua=eval(so1)+eval(so2);
+                break;
+            case '-':
+                ketQua=eval(so1)-eval(so2);
+                break;
+            case '*':
+                ketQua=eval(so1)*eval(so2);
+                break;
+            case '/':
+                if(eval(so2)==0){
+                    alert("So thu 2 phai khac 0");
+                    return;
+                }
+                ketQua=eval(so1)/eval(so2);
+                break;
+        }
+        document.getElementById("so3").value=ketQua;
+    }
+    // function tinhTong(){
+    //     let so1=document.getElementById("so1").value;
+    //     let so2=document.getElementById("so2").value;
+    //     if(so1==""||so2==""){
+    //         alert("Hay nhap so");
+    //         return;
+    //     }
+    //     let tong=eval(so1)+eval(so2);
+    //     document.getElementById("kq").value=tong;
+    // }
+    // function tinhHieu(){
+    //     let so1=document.getElementById("so1").value;
+    //     let so2=document.getElementById("so2").value;
+    //     if(so1==""||so2==""){
+    //         alert("Hay nhap so");
+    //         return;
+    //     }
+    //     let hieu=eval(so1)-eval(so2);
+    //     document.getElementById("kq").value=hieu;
+    // }
+
+
+
+    //     let a = +document.getElementById("so1").value
+    //     let b = +document.getElementById("so2").value
+    //     document.getElementById("so3").value =a+b
+    //     document.getElementById("so1").value =""
+    //     document.getElementById("so2").value =""
+    //
+    //     if (a==""||b==""){
+    //        alert("nhập số")
+    //     }
+    //     return;
+    //
+    // } function tru(){
+    //     let a = +document.getElementById("so1").value
+    //     let b = +document.getElementById("so2").value
+    //    if(a==""||b==""){
+    //        alert("nhập số")
+    //        return
+    //    }
+    //    let tru= eval(a)-eval(b)
+    //     document.getElementById("so3").value=tru
+    //
+    // } function nhan(){
+    //     let a = +document.getElementById("so1").value
+    //     let b = +document.getElementById("so2").value
+    //     document.getElementById("so3").value = a*b
+    //     document.getElementById("so1").value = ""
+    //     document.getElementById("so2").value = ""
+    //
+    // } function chia(){
+    //     let a = +document.getElementById("so1").value
+    //     let b = +document.getElementById("so2").value
+    //     document.getElementById("so3").value = a/b
+    //     document.getElementById("so1").value =""
+    //     document.getElementById("so2").value = ""
+    //
+    // }
+
+</script>
+</body>
+</html>

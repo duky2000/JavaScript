@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="on1" type="text">
+<input id="on2" type="text">
+<br>
+<button onclick="tinhTong()">+</button>
+<button onclick="tinhHieu()">-</button>
+<button onclick="tinhTich()">*</button>
+<button onclick="tinhChia()">/</button>
+<br>
+<input id="ketqua" onclick="tinhTong()" type="text">
+<script>
+    function tinhTong() {
+        let a = +document.getElementById("on1").value;
+        let b = +document.getElementById("on2").value;
+        document.getElementById("ketqua").value = a + b
+        document.getElementById("on1").value=""
+        document.getElementById("on2").value=""
+    }
+    function tinhHieu() {
+        let a = +document.getElementById("on1").value;
+        let b = +document.getElementById("on2").value;
+        document.getElementById("ketqua").value = a - b
+        document.getElementById("on1").value=""
+        document.getElementById("on2").value=""
+    }
+    function tinhTich() {
+        let a = +document.getElementById("on1").value;
+        let b = +document.getElementById("on2").value;
+        document.getElementById("ketqua").value = a * b
+        document.getElementById("on1").value=""
+        document.getElementById("on2").value=""
+    }
+    function tinhChia() {
+        let a = +document.getElementById("on1").value;
+        let b = +document.getElementById("on2").value;
+        document.getElementById("ketqua").value = a / b
+        document.getElementById("on1").value=""
+        document.getElementById("on2").value=""
+    }
+
+
+</script>
+</body>
+</html>
