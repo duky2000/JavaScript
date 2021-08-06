@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTra(a) {
+        let array = []
+        for (let i = 0; i < a.length; i++) {
+            if (array.indexOf(a[i]) == -1) {
+                array.push(a[i]);
+            }
+            else {
+                return false;
+            }
+        }
+        return true;
+    }
+    let str = "qwertyuiopasdfghjklzxcvbnm1234567890"
+    let arr = [1,2,3,4,5,6,7,8,"a", 'b', 'b']
+    document.write(kiemTra(arr))
+
+</script>
+</body>
+</html>

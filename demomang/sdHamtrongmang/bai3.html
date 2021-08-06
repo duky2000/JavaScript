@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập chuỗi")
+    let a =  'The Quick Brown Fox'
+    let b = 'tHE qUICK bROWN fOX'
+    let arr = []
+    for (let i = 0 ; i< str.length;i++){
+        if (a.indexOf(str[i])!==-1){
+            arr.push(str[i].toLowerCase())
+        }else if (b.indexOf(str[i])!==-1){
+            arr.push(str[i].toUpperCase())
+        }else {
+            arr.push(str[i])
+        }
+    }document.write(arr.join(''))
+
+</script>
+</body>
+</html>

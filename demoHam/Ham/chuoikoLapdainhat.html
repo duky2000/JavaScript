@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function chuoiLap(arr){
+    let check = 0
+    for (let i = 0 ; i < arr.length -1 ; i++){
+        for (let j = i+1 ; j < arr.length ; j++){
+            if (arr[i] == arr[j]){
+                check = 1
+            }
+        }
+    }
+    return check
+}
+let array = [1,2,3,4,5,6,7,9,8,4]
+let count = 1
+let a = []
+for (let i = 0 ; i <= array.length - 1 ; i++){
+    for (let j = i+1; j <=array.length;j++){
+        if (array[i]!=array[j]){
+            if (chuoiLap(array.slice(i,j))==0){
+                if (array.slice(i,j).length>=count){
+                    a = array.slice(i,j)
+                    count = array.slice(i,j).length
+                }
+            }
+        }
+    }
+}document.write(a)
+
+let arr = [1,2,3,4,5,3,4,6,8,5,9,7];
+
+function kiemTraChuoi(arr) {
+
+    let res = [];
+    let tmp = [];
+    let count = 0;
+    for(let i = 0; i < arr.length; i++) {
+        if(tmp.indexOf(arr[i]) == -1) {
+            tmp.push(arr[i])
+            count++;
+            if((i == arr.length - 1)) {
+                if(res.length < tmp.length) return tmp;
+                return res;
+            }
+        }
+        else {
+            if(res.length < tmp.length) {
+                res = tmp;
+            }
+            if(i == arr.length-1) return res;
+            i--;
+            count=0;
+            tmp = []
+        }
+
+    }
+    return res;
+}
+
+let result = kiemTraChuoi(arr)
+console.log(result)
+</script>
+</body>
+</html>

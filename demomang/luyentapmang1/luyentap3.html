@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =[2,4,6,8]
+    let max1 = a[0] // 2
+    let max2 = 0
+    let b = 0
+    for (let i = 0 ; i <a.length;i++){
+        b = b +a[i]
+        if (a[i]>max1){
+            if(max1 > max2) {
+                max2 = max1;
+            }
+            max1=a[i]
+
+        }if (max2<a[i] && a[i]!=max1){
+            max2=a[i]
+        }
+    }
+    document.write("giá trị lớn nhất trong mảng là : "+max1+"<br>")
+    document.write("giá trị lớn thứ 2 trong mảng là : "+max2+"<br>")
+    document.write(" giá trị trung bình trong mảng là : "+(b/a.length))
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let str = prompt("nhập vào chuỗi")
+   let arr = []
+   for (let i = 0 ; i<str.length;i++){
+       arr.push(str[i])
+   }
+   let count = 0
+   for (let i = 0 ; i <arr.length; i++){
+       if (!isNaN(arr[i])){
+           count++
+       }
+   }document.write("số các phần tử trong mảng là : "+count)
+</script>
+</body>
+</html>

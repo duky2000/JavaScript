@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PIKACHU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio loop id="audio" src="audio.mp3" preload="auto" allow = "autoplay"></audio>
+    <div class="show ">
+        <div id="batdau">
+            <button class="play" style="background-color: greenyellow" onclick="khoiTao()">Play</button>
+        </div>
+        <div id="game" >
+            <span style="width: 150px"><span style="color: darkorange">Time : <span id="time" style="color: orange"></span></span></span>
+            "&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"
+            <span style="width: 200px"><span style="color: darkorange">Score : <span id="score1">0</span></span></span>
+            "$nbsp""$nbsp""$nbsp""$nbsp""$nbsp""$nbsp"
+            <span style="width: 200px"><span style="color: darkorange"><span>Reverse </span></span></span>
+        </div>
+        <div id="ketqua">
+            <button class="button1" style="background-color:wheat"  >Hết giờ</button>
+            <br>
+            </br>
+            <button  class="button2" style="background-color: wheat" id="score2"></button>
+            <button class="button3" style="background-color: wheat" onclick="khoiTao()">Chơi lại</button>
+        </div>
+        <table align='center' id='table' height='100px'></table>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập vào mảng ký tự ")
+    let arr = []
+    for (let i = 0; i < str; i++) {
+        arr[i] = prompt("nhập vào ký tự thứ " + i)
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == "-") {
+            arr[i] = "&#95"
+        }
+    }
+    document.write(arr)
+</script>
+</body>
+</html>

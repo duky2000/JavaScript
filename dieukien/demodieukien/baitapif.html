@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let weight = prompt("nhập cân nặng :")
+    let height = prompt("nhập chiều cao :")
+    suckhoe = weight / (height*height)
+    alert(suckhoe)
+  if (suckhoe<18.5)
+      document.write("thiếu cân")
+    else if (suckhoe<25.0)
+        document.write("bình thường")
+  else if (suckhoe<30.0)
+        document.write("thừa cân")
+    else
+    document.write("béo phì")
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr= [2,5,7,3,8,1,4]
+    for (let i = 0;i<arr.length;i++){
+        for (let j = i+1;j<arr.length;j++){
+            if (arr[i]>arr[j]){
+                let b = arr[i]
+                arr[i]=arr[j]
+                arr[j]=b
+            }
+        }
+    }document.write(arr)
+</script>
+</body>
+</html>

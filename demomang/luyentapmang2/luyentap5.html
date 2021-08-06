@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập vào chuỗi a")
+    let b = prompt("nhập vào chuỗi b")
+    // if (a==b){
+    //     document.write("Chuỗi a bằng chuỗi b")
+    // } else {
+    //     document.write("Chuỗi a khác chuỗi b")
+    // }
+    let arr1 = []
+    let arr2 = []
+    for (let i = 0; i < a.length; i++) {
+        arr1.push(a[i])
+    }
+    for (let j = 0; j < b.length; j++) {
+        arr2.push(b[j])
+    }
+    let count
+    if (arr1.length != arr2.length) {
+        count = "chuỗi a khác chuỗi b"
+    } else {
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] == arr2[i]) {
+                count = "chuỗi a giống chuỗi b"
+            } else {
+                count = "chuỗi a khác chuỗi b"
+            }
+        }
+    } document.write(count)
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function minNumber(x, y, z) {
+
+        let min = x
+        if (y < min) {
+            min = y
+            return min
+        } else if (z < min) {
+            min = z;
+            return min
+
+        } else {
+            return min
+        }
+    }
+
+    let x = prompt("nhập vào số nguyên")
+    let y = prompt("nhập vào số nguyên")
+    let z = prompt("nhập vào số nguyên")
+    alert(minNumber(x, y, z))
+</script>
+</body>
+</html>

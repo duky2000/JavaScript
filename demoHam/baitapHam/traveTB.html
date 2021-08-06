@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function giaTritb(arr){
+        let sum = 0
+        let count = 0
+        let TB
+        for (let i = 0 ; i<arr.length;i++){
+            if (arr[i]%3==0&&arr[i]%5==0){
+                sum = sum+ arr[i]
+                count++
+
+            }TB = sum/count
+
+        }return TB
+    }
+    let arr=[10 ,15 ,20 ,25,30]
+    alert(giaTritb(arr))
+</script>
+</body>
+</html>

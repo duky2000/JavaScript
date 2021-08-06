@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = [1,4,3,6,8,35,86,4]
+  let max = a[0]
+  let b = 0
+  for (let i = 0;i<a.length;i++){
+      if (a[i]>max){
+          max= a[i]
+          b = i
+      }
+  }document.write(" số lớn nhất trong mảng là : "+max+" nằm ở vị trí thứ : "+b)
+    //////////////////////////////////////////////////////////////////
+
+
+    // let numbers = +prompt("Nhập số lượng phần tử trong mảng :");
+    // while (numbers<=0){
+    //     alert("Số lượng phải lớn hơn 0");
+    //     numbers = +prompt("Nhập lại số lượng phần tử trong mảng :");
+    // }
+    // let array =[];
+    // for (i=0;i<numbers;i++){
+    //     array[i] = +prompt("Nhập số thứ " +i);
+    // }
+    // let index;
+    // let max = array[0];
+    // for (j=1;j<array.length;j++){
+    //     if (array[j]>max){
+    //         max = array[j];
+    //         index=j;
+    //     }
+    // }
+    // document.write("Phần tử có giá trị lớn nhất là "+max+" ở vị trí thứ "+(index+1));
+
+</script>
+</body>
+</html>

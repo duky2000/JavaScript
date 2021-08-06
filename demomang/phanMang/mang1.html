@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Sample Screen :</h1>
+<input type="text" id="text">
+<button id="add" onclick="add()">add</button>
+<button id="display" onclick="display()">display</button>
+<div id="div"></div>
+<script>
+   let x = 0
+   let arr = Array() // arr=[]
+   function add() {
+       arr[x] = document.getElementById("text").value
+       alert("thành phần "+arr[x]+" là : "+x)
+       x++
+       document.getElementById("text").value = ""
+   }
+   function display(){
+       let a = "<hr>"
+       for (let i = 0 ; i <arr.length; i ++){
+           a +="thành phần "+i+" = "+arr[i]+"<br>"
+       }
+       document.getElementById("div").innerHTML=a
+   }
+
+
+</script>
+</body>
+</html>

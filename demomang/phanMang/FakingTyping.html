@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<center>
+    <h1>Typing slowly</h1>
+    <textarea id="output" onkeyup="changeValue(a)" rows="10" cols="40"></textarea>
+    </center>
+        <script>
+            let a = "Sao mày ngu thế";
+            let i = 0;
+            let str = '';
+
+            function changeValue(n) {
+                if (i < n.length) {
+                    str += n[i];
+                    document.getElementById("output").value = str;
+                    i++;
+                } else {
+                    i = 0;
+                    str = "";
+                }
+            }
+        </script>
+</body>
+</html>

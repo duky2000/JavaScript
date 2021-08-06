@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function add(arr, element, index) {
+
+
+        for (let i = arr.length - 1; i >= index; i--) {
+            arr[i + 1] = arr[i]
+            // arr[6] = arr[5];
+        }
+        arr[index] = element
+    }
+
+    let array = [1, 2, 3, 5, 6, 7] // 1, 2, 3, 9, 5, 6 ,7
+
+
+    add(array, 9, 3)
+    document.write(array)
+</script>
+</body>
+</html>

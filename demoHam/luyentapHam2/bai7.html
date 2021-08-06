@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function reverse(a,b) {
+        let index = a;
+        a = b;
+        b = index
+        return (a + " ; " + b)
+    }
+    let a = +prompt("nhập phần tử")
+    let b = +prompt("nhập phần tử")
+
+    document.write(reverse(a, b))
+
+    // function reverse(arr) {
+    //     let index = a;
+    //     a = b;
+    //     b = index
+    //     console.log(a, b)
+    //     return (a + " ; " + b)
+    // }
+    // let a = +prompt("nhập phần tử")
+    // let b = +prompt("nhập phần tử")
+    //
+    // document.write(reverse([a, b]))
+    // console.log(a,b)
+
+</script>
+</body>
+</html>

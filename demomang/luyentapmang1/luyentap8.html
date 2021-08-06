@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt("nhập vào phần tử ")
+    let num = arr.split(" ")
+    for (let i = 1 ; i <num.length; i++){
+        num.sort(function (a, b){
+           return  b-a
+        })
+    }
+    document.write("mảng đã được sắp xếp theo thứ tự giảm dần "+num)
+</script>
+</body>
+</html>

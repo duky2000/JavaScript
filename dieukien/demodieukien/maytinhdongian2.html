@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1px solid black">
+    <tr>
+        <td colspan="4"><input type="text" id="screen"></td>
+    </tr>
+    <tr align="center">
+        <td><input type="button" value="1" onclick="insert(this)"/></td>
+        <td><input type="button" value="2" onclick="insert(this)"/></td>
+        <td><input type="button" value="3" onclick="insert(this)"/></td>
+        <td><input type="button" value="+" onclick="insert(this)"/></td>
+    </tr>
+    <tr align="center">
+        <td><input type="button" value="4" onclick="insert(this)"/></td>
+        <td><input type="button" value="5" onclick="insert(this)"/></td>
+        <td><input type="button" value="6" onclick="insert(this)"/></td>
+        <td><input type="button" value="-" onclick="insert(this)"/></td>
+    </tr>
+    <tr align="center">
+        <td><input type="button" value="7" onclick="insert(this)"/></td>
+        <td><input type="button" value="8" onclick="insert(this)"/></td>
+        <td><input type="button" value="9" onclick="insert(this)"/></td>
+        <td><input type="button" value="*" onclick="insert(this)"/></td>
+    </tr>
+    <tr align="center">
+        <td><input type="button" value="C" onclick="del()"/></td>
+        <td><input type="button" value="0" onclick="insert(this)"/></td>
+        <td><input type="button" value="=" onclick="calc()"/></td>
+        <td><input type="button" value="/" onclick="insert(this)"/></td>
+    </tr>
+</table>
+<script>
+    function insert(num) {
+        let number = num.value;
+        let screen = document.getElementById('screen');
+        screen.value = screen.value + number
+    }
+    function del() {
+        let screen = document.getElementById('screen');
+        screen.value = '';
+    }
+    function calc() {
+        let screen = document.getElementById('screen');
+        let result = eval(screen.value);
+        screen.value =  + result;
+    }
+</script>
+</body>
+</html>

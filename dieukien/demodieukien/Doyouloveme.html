@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body, #app {
+        height: 100vh;
+        width: 100%;
+    }
+    #app {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #noButton {
+        position: relative;
+    }
+</style>
+<body>
+    <div id="app">
+        <h1>Do you love me?</h1>
+        <div>
+            <input type="button" value="yes" onclick="alert('yêu thế')">
+            <input id="noButton" type="button"value="no" onmouseover="changePosition(event)">
+        </div>
+    </div>
+<script>
+
+    let btn = document.getElementById("noButton");
+    function changePosition() {
+        let maxX = window.innerWidth;
+        let maxY = window.innerHeight;
+        btn.style.position = "absolute"
+        btn.style.top = (Math.random() * maxY) +"px";
+        btn.style.right = (Math.random() * maxX) +"px";
+    }
+
+</script>
+</body>
+</html>

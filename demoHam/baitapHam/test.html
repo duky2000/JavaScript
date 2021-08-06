@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTra(a) {
+        if (a % 2 == 0) {
+            return true
+        } else {
+            return false
+        }
+    }
+    let count = 0
+    let tong = 0
+    while (count<100){
+        for (let i = 0 ; i<1000;i++){
+            if (kiemTra(i)==true){
+                tong += i
+                count++
+            }
+        }
+    }
+
+    document.write(tong)
+</script>
+</body>
+</html>

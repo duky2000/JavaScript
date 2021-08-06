@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function soNguyento(number) {
+        if (number < 2)
+            return false
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0)
+                return false
+        }
+        return true
+    }
+
+    let num = +prompt("nhap vao");
+    alert(soNguyento(num));
+</script>
+</body>
+</html>

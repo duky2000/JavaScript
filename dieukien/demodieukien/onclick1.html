@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <img id="img" src="https://tse1.mm.bing.net/th?id=OIP.t8z6K7RTZGuCu9aYb5YqzQHaHn&pid=Api&P=0&w=300&h=300">
+    <br>
+    <input type="button" value="click me" onclick="sangPhai()">
+</form>
+<script>
+    let img = null;
+    img = document.getElementById("img")
+    function init(){
+        img.style.position = 'relative'
+        img.style.left = '0px'
+    }
+    function sangPhai(){
+        img.style.left = parseInt(img.style.left) + 20 +'px'
+    }
+    window.onload = init()
+</script>
+</body>
+</html>

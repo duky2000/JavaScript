@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt("nhập vào 1 mảng số nguyên")
+    let array = arr.split("")
+    let first = 0
+    let last = array.length - 1
+    let result
+    while (first < last) {
+        result = array[first]
+        array[first] = array[last]
+        array[last] = result
+        first++;
+        last--;
+    }
+    document.write(array + " đã đảo ngược các phần tử này trong mảng ")
+
+</script>
+</body>
+</html>

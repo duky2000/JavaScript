@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table border="1" >
+        <tr>
+            <td colspan="4"><input type="text" id="result"></td>
+        </tr>
+        <tr>
+            <td><input  type="button" value="1" id="nut1" onclick="insert('nut1')";></td>
+            <td><input  type="button" value="2" id="nut2" onclick="insert('nut2')";></td>
+            <td><input  type="button" value="3" id="nut3" onclick="insert('nut3')";></td>
+            <td><input  type="button" value="+" id="nut+" onclick="insert('nut+')"></td>
+        </tr>
+        <tr>
+            <td><input  type="button" value="4" id="nut4" onclick="insert('nut4')";></td>
+            <td><input  type="button" value="5" id="nut5" onclick="insert('nut5')";></td>
+            <td><input  type="button" value="6" id="nut6" onclick="insert('nut6')";></td>
+            <td><input  type="button" value="-" id="nut-" onclick="insert('nut-')"></td>
+        </tr>
+        <tr>
+            <td><input  type="button" value="7" id="nut7" onclick="insert('nut7')";></td>
+            <td><input  type="button" value="8" id="nut8" onclick="insert('nut8')";></td>
+            <td><input  type="button" value="9" id="nut9" onclick="insert('nut9')";></td>
+            <td><input  type="button" value="*" id="nut*" onclick="insert('nut*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" onclick="xoa()"></td>
+            <td><input type="button" value="0" id="nut0" onclick="insert('nut0')"></td>
+            <td><input  type="button" value="=" id="nut=" onclick="pheptinh()"></td>
+            <td><input  type="button" value="/" id="nut/" onclick="insert('nut/')"></td>
+        </tr>
+    </table>
+</form>
+<script>
+    let str="";
+
+    function insert(id) {
+
+        str = str+ document.getElementById(id).value;
+        document.getElementById('result').value=str;
+
+
+    }
+    function pheptinh() {
+        document.getElementById('result').value = eval(document.getElementById('result').value)
+
+    }
+    function xoa() {
+        let a = document.getElementById('result').value;
+        document.getElementById('result').value = a.substring(0, a.length -1)
+
+    }
+</script>
+</body>
+</html>

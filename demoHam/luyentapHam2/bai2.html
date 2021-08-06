@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let bankinh = +prompt("nhâp bán kính hình tròn")
+
+    function chuVihinhtron(bankinh) {
+        let chuvi = bankinh * 2 * 3.14
+        return chuvi
+    }
+
+    let duongkinh = +prompt("nhập đường kính hình tròn")
+
+    function dienTichhinhtron(duongkinh) {
+        let dientich = duongkinh * 3.14
+        return dientich
+    }
+
+    document.write(chuVihinhtron(bankinh) + "<br>")
+    document.write(dienTichhinhtron(duongkinh))
+
+</script>
+</body>
+</html>

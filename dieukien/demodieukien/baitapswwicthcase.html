@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input  id="so1" type="text">
+<button onclick="tinhSongay()">tính số ngày</button>
+
+<script>
+    function tinhSongay(){
+        let thang = +document.getElementById("so1").value
+
+        switch (thang){
+            case 1 :
+            case 3 :
+            case 5 :
+            case 7 :
+            case 8 :
+            case 10 :
+            case 12 :
+                alert("tháng " + thang + " có 31 ngày")
+                break
+            case 2 :
+                alert("tháng " + thang + " có 28 hoặc 29 ngày")
+                break
+            case 4 :
+            case 6 :
+            case 9 :
+            case 11 :
+                alert("tháng " + thang + "có 30 ngày")
+                break
+            default :
+                alert("bạn đã nhâp sai tháng")
+    }
+
+    }
+</script>
+</body>
+</html>

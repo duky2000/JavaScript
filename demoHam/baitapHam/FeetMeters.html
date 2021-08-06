@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table border="1">
+        <tr>
+            <th>Feet</th>
+            <th>Meters</th>
+            <th>Meters</th>
+            <th>Feet</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="feet" oninput="feetToMeter()"></td>
+            <td id="meter"></td>
+            <td><input type="text" id="met" oninput="meterToFeet()"></td>
+            <td id="ft"></td>
+        </tr>
+    </table>
+</form>
+<script>
+    function feetToMeter(feet) {
+        feet = document.getElementById('feet').value;
+        meter = 0.305 * feet;
+        document.getElementById('meter').innerHTML = meter;
+    }
+    function meterToFeet(meter) {
+        meter = document.getElementById('met').value;
+        foot = 3.279 * meter;
+        document.getElementById('ft').innerHTML = foot;
+    }
+</script>
+<!--<script>-->
+<!--    function footToMeter(foot){-->
+<!--        return foot*0.305-->
+<!--    }-->
+<!--    let a = prompt("nhập foot sang mester ")-->
+<!--    alert(footToMeter(a))-->
+
+<!--    function meterToFoot(meter){-->
+<!--        return meter*3.279-->
+<!--    }-->
+<!--    let b = prompt("nhập mester sang foot")-->
+<!--    alert(meterToFoot(b))-->
+
+<!--</script>-->
+</body>
+</html>

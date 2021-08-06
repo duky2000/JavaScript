@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function indexOf(arr, index) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == index) {
+                return i
+            }
+
+        }
+        return -1
+    }
+
+    let array = [1, 2, 3, 4, 5]
+    let x = indexOf(array, 5)
+    document.write(x)
+
+</script>
+</body>
+</html>

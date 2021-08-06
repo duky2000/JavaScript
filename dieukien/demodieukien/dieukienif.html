@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let year = (+prompt("nhap nam vao"))
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                alert(year + " là năm nhuận ");
+            } else {
+                alert(year + " không phải năm nhuận");
+            }
+        } else {
+            alert(year + "là năm nhuận");
+        }
+    } else {
+        alert(year + " không phải năm nhuận");
+    }
+
+    //cách2
+    //
+    // if (year % 4 == 0 && year % 100 != 0) {
+    //     alert("là năm nhuận")
+    // } else if (year % 100 == 0 && year % 400 != 0) {
+    //     alert("không phải năm nhuận")
+    //
+    // } else if (year % 100 == 0 && year % 400 == 0) {
+    //     alert("là năm nhuận")
+    //
+    // } else {
+    //     alert("không phải năm nhuận")
+    // }
+
+    //cách 3
+
+    // if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+    //     alert("là năm nhuận")
+    // }
+    // else {
+    //     alert("không phải năm nhuận")
+    //
+    // }
+
+</script>
+</body>
+</html>

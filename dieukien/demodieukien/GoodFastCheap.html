@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="checkbox" id="good" onclick="check('cheap','fast')">Good
+    <br>
+    <input type="checkbox" id="cheap" onclick="check('good','fast')">Cheap
+    <br>
+    <input type="checkbox" id="fast" onclick="check('good','cheap')">Fast
+</form>
+<script>
+    function check(id2,id3) {
+        if (document.getElementById(id2).checked==true && document.getElementById(id3).checked==true) {
+            value = Math.round(Math.random());
+            if (value == 0) {
+                document.getElementById(id2).checked =false;
+            } else {
+                document.getElementById(id3).checked =false;
+            }
+        }
+    }
+</script>
+</body>
+</html>

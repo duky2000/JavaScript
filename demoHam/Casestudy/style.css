@@ -1,0 +1,56 @@
+
+img {
+
+}
+
+body {
+    background-image: url("http://3.bp.blogspot.com/-w9YKQ3rQK1c/VYEti_aCfxI/AAAAAAAAPZM/WhChxWVmrv0/s1600/game-pokemon.jpg");
+}
+
+.show {
+    text-align: center;
+
+}
+#ketqua {
+    background-image: url("https://i.pinimg.com/736x/e6/bc/d9/e6bcd9bbfb97999eb52fdba5dca57f71--pikachu-pokemon.jpg");
+    height: 70vh;
+    width: 100vw;
+    position: absolute;
+    display: none;
+}
+
+#batdau {
+    position: fixed;
+    top: calc(50% - 50px);
+    left: calc(50% - 100px);
+
+}
+.play{
+    width: 200px;
+    height: 70px;
+    font-family: SansSerif;
+    font-size: 25px;
+}
+.button1 {
+    width: 100px;
+    height: 40px;
+    font-family: SansSerif;
+    font-size: 20px;
+}
+.button2 {
+    width: 200px;
+    height: 50px;
+    font-family: SansSerif;
+    font-size: 20px;
+}
+.button3 {
+    width: 200px;
+    height: 50px;
+    font-family: SansSerif;
+    font-size: 25px;
+}
+
+#game {
+    display: none;
+}
+
