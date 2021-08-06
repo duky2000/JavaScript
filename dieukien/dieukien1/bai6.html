@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thunhap = +prompt("nhập thu nhập tháng này")
+    if (thunhap<=10){
+        hoahong = "lỗ vốn"
+    }else if (thunhap<=20){
+        hoahong = (thunhap-10)*1.5
+    }else if (thunhap<=30){
+        hoahong = (thunhap-10)*2.0
+    }else if (thunhap<=40){
+        hoahong = (thunhap-10)*2.5
+    }else {
+        hoahong = (thunhap-10)*3.0
+    }
+    alert("hoa hồng tháng này là : " + hoahong + " triệu")
+</script>
+</body>
+</html>

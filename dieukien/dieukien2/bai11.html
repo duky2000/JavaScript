@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="salary"> triệu đồng
+    <input type="button" onclick="calculate()" value="Personal income tax">
+    <p id="result"></p>
+</form>
+<script>
+    function calculate() {
+        salary = document.getElementById('salary').value;
+        switch (salary <= 11?1:salary <=16?2:salary<=21?3: salary<=29?4 :salary<=43?5 :salary<=63?6 :salary <=91?7:8) {
+            case 1:
+                tax = 0;
+                break;
+            case 2:
+                tax = (salary-11) *0.05;
+                break;
+            case 3:
+                tax = 5*0.05 +(salary-16)*0.1;
+                break;
+            case 4:
+                tax = 5*0.05 +5*0.1+(salary-21)*0.15;
+                break;
+            case 5:
+                tax = 5*0.05+ 5*0.1 +8 *0.15+(salary-29)*0.2;
+                break;
+            case 6:
+                tax = 5*0.05 +5*0.1+8*0.15+14*0.2+(salary-43)*0.25 ;
+                break;
+            case 7:
+                tax = 5*0.05+5*0.1+8*0.15+14*0.2+20*0.25+(salary-63)*0.3;
+                break;
+            case 8:
+                tax = 5*0.05+5*0.1+8*0.15+14*0.2+20*0.25+28*0.3+(salary-91)*0.35;
+                break;
+        }
+        document.getElementById('result').innerText = "Thuế TNCN phải đóng là : " +tax+ " triệu đồng";
+    }
+</script>
+</body>
+</html>

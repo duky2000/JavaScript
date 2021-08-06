@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let a = 0, b = 1, c ;
+    let num = +prompt("Nhập số lượng dãy số fibonaci :");
+    let count = 0;
+    while (count < num) {
+        document.write( a + ";" + "<br>");
+        c = a + b;
+        a = b
+        b = c;
+        count++;
+
+    }
+</script>
+</body>
+</html>

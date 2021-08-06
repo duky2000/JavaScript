@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thongBao = "Đây không là 3 cạnh của tam giác";
+    let a = +prompt("Nhập độ dài cạnh thứ 1 :");
+    let b = +prompt("Nhập độ dài cạnh thứ 2 :");
+    let c = +prompt("Nhập độ dài cạnh thứ 3 :");
+    if (a>0 && b>0) {
+        if (c>0) {
+            if (a+b>c) {
+                if (a+c>b) {
+                    if (b+c>a) {
+                        alert("Đây là 3 cạnh của tam giác");
+                    } else {
+                        thongBao;
+                    }
+                } else {
+                    thongBao;
+                }
+            } else {
+                thongBao;
+            }
+        } else {
+            thongBao;
+        }
+    } else {
+        thongBao;
+    }
+    alert(thongBao);
+</script>
+</body>
+</html>

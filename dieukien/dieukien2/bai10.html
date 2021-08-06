@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soDien = +prompt("Nhập số điện dùng trong tháng: ");
+    switch (soDien == 0 ? 1 : soDien <=50?2:soDien<=100?3: soDien<=200?4:5) {
+        case 1:
+            tienDien = 0;
+            break;
+        case 2:
+            tienDien = soDien * 1678;
+            break;
+        case 3:
+            tienDien = 50 * 1678 + (soDien - 50) * 1734;
+            break;
+        case 4:
+            tienDien = 50 *1678 + 50 * 1734 + (soDien-100) * 2014;
+            break;
+        case 5:
+            tienDien = 50 *1678 + 50 * 1734 + 100 * 2014 + (soDien-200) *2536;
+            break;
+    }
+    alert(tienDien);
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemtra(a) {
+        if (a < 2) {
+            return false
+        }
+        for (let i = 2; i < a; i++) {
+            if (a % i == 0) {
+                return false
+            }
+        }
+        return true
+    }
+
+    let numbers = +prompt("nhập số lượng số nguyên tố cần in ra")
+    let cout = 0
+    let n = 2
+    let b = ""
+    while (cout < numbers) {
+        if (kiemtra(n)) {
+            cout++
+            b = b + n + ";"
+        }
+        n++
+    }
+    document.write(b)
+</script>
+</body>
+</html>

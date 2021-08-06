@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fibonaci() {
+        let a = 0;
+        let b = 1;
+        let c = 2;
+        while (true) {
+            let d = a + b
+            c++;
+            a = b;
+            b = d;
+
+            if (d % 5 == 0) {
+                document.write(d)
+                break;
+
+            }
+
+        }
+    }
+
+    fibonaci()
+
+</script>
+</body>
+</html>

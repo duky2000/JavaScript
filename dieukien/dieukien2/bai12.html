@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soTienVay = +prompt("Nhập số tiền muốn vay :");
+    let laiSuat = +prompt("Nhập lãi suất ngân hàng :");
+    let soThang = +prompt("Nhập số tháng vay :");
+    laiNganHang = (soTienVay + (1+laiSuat) ** soThang) - soTienVay;
+    alert(laiNganHang + "triệu đồng");
+</script>
+</body>
+</html>
